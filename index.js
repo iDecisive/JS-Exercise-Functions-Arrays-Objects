@@ -37,7 +37,7 @@ function addNumbers(num1, num2) {
 */
 function sayGoodbye(name) {
  
-  return "Goodbye, " + name + ".";
+  return "Goodbye, " + name + ". Have a great day.";
   
 }
 
@@ -127,7 +127,7 @@ function makePersonObject(id, name, email) {
  * the returned value should look like `Hello, my name is Leia`.
 */
 function getName(name) {
-  return "Hello, my name is " + name[0].name; //gives error typing name.1?? 
+  return "Hello, my name is " + name.name; //gives error typing name.1?? 
 }
 
 
@@ -179,12 +179,14 @@ function isItAnApple(fruitarray2) {
 
   let nar = []; //new array
 
-  for (let i=0; i<fruitarray2; i++) {
+  for (let i=0; i<fruitarray2.length; i++) {
 
-    if (fruitarray2[i] === "apple") {
-       nar.push(true);
-    } else {
+    if (fruitarray2[i] !== "apple") {
+
       nar.push(false);
+
+    }else {
+      nar.push(true);
     }
 
   }
